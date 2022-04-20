@@ -1,4 +1,4 @@
-# Project 3: Concordance of microarray and RNA-Seq differential gene expression
+# Project 4: Single Cell RNA-Seq Analysis of Pancreatic Cells
 
 The pancreas is a complex organ comprised of a diverse set of cell types. Proper function of the pancreas is required to maintain healthy metabolism, and pancreatic dysfunction leads to serious illnesses, including type 1 diabetes. Baron et al performed single cell RNA sequencing in a set of post-mortem human donor pancreatic cells from four subjects and two mouse models to better understand the cellular diversity in the pancreas. Analysis of the data identified previously known cell types as well as rare and novel cell type subpopulations, and created a more detailed characterization of the diversity of those cell types. In this project, we will attempt to replicate their primary findings using current analytical methodology and software packages. 
 
