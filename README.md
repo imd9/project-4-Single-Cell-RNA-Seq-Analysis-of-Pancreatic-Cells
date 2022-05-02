@@ -16,6 +16,14 @@ Italo Duran: Programmer (duran01@bu.edu)
 # Repository Contents
 
 1. Data Curator:
+    barcode.py: Takes zipped fasta file as input and outputs txt file that contains unique barcodes with number of reads for each.
+    combine.py: Takes text files of filtered barcodes from each sample and combines them into single list in text file for salmon alevin whitelist input.
+    dist_plot.py: Plots cumulative distribution of reads per distinct barcode.
+    filter_barcode.py: Takes barcode list text file, filters for barcodes that have > 1000 reads, and outputs list of filtered barcodes in txt file.
+    index.qsub: Creates index of human transcriptome.
+    salmon.qsub: Runs salmon alevin to map and count single-cell RNA-seq reads.
+    
 2. Programmer:
-3. Analyst:
 
+3. Analyst
+    analyst.R
