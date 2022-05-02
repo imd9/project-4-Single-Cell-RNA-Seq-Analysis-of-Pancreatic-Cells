@@ -1,0 +1,31 @@
+#!/bin/bash -l
+
+# Author: Monica Roberts
+# Purpose: Runs salmon alevin to map and count single-cell RNA-seq reads.
+
+#$ -cwd
+#$ -P bf528
+#$ -j y
+#$ -pe mpi_16_tasks_per_node 16
+#$ -l h_rt=48:00:00
+
+module load salmon
+
+SRR4_1=/projectnb/bf528/project_4_scrnaseq/fastq/SRR3879604/SRR3879604_1_bc.fastq.gz
+SRR4_2=/projectnb/bf528/project_4_scrnaseq/fastq/SRR3879604/SRR3879604_2.fastq.gz
+
+SRR5_1=/projectnb/bf528/project_4_scrnaseq/fastq/SRR3879605/SRR3879605_1_bc.fastq.gz
+SRR5_2=/projectnb/bf528/project_4_scrnaseq/fastq/SRR3879605/SRR3879605_2.fastq.gz
+
+SRR6_1=/projectnb/bf528/project_4_scrnaseq/fastq/SRR3879606/SRR3879606_1_bc.fastq.gz
+SRR6_2=/projectnb/bf528/project_4_scrnaseq/fastq/SRR3879606/SRR3879606_2.fastq.gz
+
+reference=/projectnb/bf528/users/swiss_cheese_2022/project_4/curator/gencode.v40.transcripts.fa.gz
+
+index=/projectnb/bf528/users/swiss_cheese_2022/project_4/curator/v40.index
+
+mapping=/projectnb/bf528/users/swiss_cheese_2022/project_4/curator/mapping.tsv
+
+whitelist_list=/projectnb/bf528/users/swiss_cheese_2022/project_4/curator/barcode_whitelist.txt
+
+salmon alevin -l ISR -p 16 -1 ${SRR4_1} ${SRR5_1} ${SRR6_1} -2 ${SRR4_2} ${SRR5_2} ${SRR6_2} -i ${index} --tgMap ${mapping} --whitelist ${whitelist_list} -o alevin_output --end 5 --barcodeLength 19 --umiLength 6 --dumpMtx

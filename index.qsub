@@ -1,0 +1,12 @@
+#!/bin/bash -l
+
+# Author: Monica Roberts
+# Purpose: Creates index of human transcriptome.
+
+#$ -P bf528
+#$ -cwd
+#$ -pe omp 16
+
+module load salmon
+
+salmon index -p 16 -t /projectnb/bf528/users/swiss_cheese_2022/project_4/curator/gencode.v40.transcripts.fa.gz --gencode -i /projectnb/bf528/users/swiss_cheese_2022/project_4/curator/v40.index
