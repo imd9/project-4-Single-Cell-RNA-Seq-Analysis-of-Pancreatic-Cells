@@ -25,5 +25,6 @@ Italo Duran: Programmer (duran01@bu.edu)
     
 2. Programmer:
 
-3. Analyst
-    analyst.R
+3. Analyst:
+    analyst.R: This script analyses and identifies marker genes for clusters that were created. 
+
