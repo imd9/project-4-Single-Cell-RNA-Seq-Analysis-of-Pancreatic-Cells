@@ -33,7 +33,6 @@ Italo Duran: Programmer (duran01@bu.edu)
 
     programmer_script.R: This script runs the filters and analyses that identifies the cell types, genes and the PCA clusters.
     
-    Images folder: In this folder are the visualization of the filters and analyses of the cell types, genes,PCA clusters, UMAP, histogram and pie charts.
     
 3. Analyst:
 
