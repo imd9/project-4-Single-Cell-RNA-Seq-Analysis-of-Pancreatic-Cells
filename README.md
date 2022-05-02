@@ -15,7 +15,7 @@ Italo Duran: Programmer (duran01@bu.edu)
 
 # Repository Contents
 
-1. Data Curator:
+1. Data Curator:\n
     barcode.py: Takes zipped fasta file as input and outputs txt file that contains unique barcodes with number of reads for each.
     combine.py: Takes text files of filtered barcodes from each sample and combines them into single list in text file for salmon alevin whitelist input.
     dist_plot.py: Plots cumulative distribution of reads per distinct barcode.
